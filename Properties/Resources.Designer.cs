@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Server_Monitor.Properties
+namespace Process_Monitor.Properties
 {
 
 

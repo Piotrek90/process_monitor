@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Server_Monitor
+namespace Process_Monitor
 {
     static class Program
     {

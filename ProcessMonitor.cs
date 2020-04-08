@@ -8,9 +8,9 @@ using MySql.Data.MySqlClient;
 using System.Diagnostics;
 using System.Xml;
 
-namespace Server_Monitor
+namespace Process_Monitor
 {
-    public class ServerMonitor
+    public class ProcessMonitor
     {
         public static string host = string.Empty;
         public static string user = string.Empty;

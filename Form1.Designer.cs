@@ -1,4 +1,4 @@
-﻿namespace Server_Monitor
+﻿namespace Process_Monitor
 {
     partial class Form1
     {
@@ -32,8 +32,6 @@
             this.GrpServerStatus = new System.Windows.Forms.GroupBox();
             this.RdbServerAus = new System.Windows.Forms.RadioButton();
             this.RdbServerAn = new System.Windows.Forms.RadioButton();
-            this.BtnStopServer = new System.Windows.Forms.Button();
-            this.BtnStartServer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtProcess = new System.Windows.Forms.TextBox();
@@ -58,7 +56,7 @@
             // 
             // BtnCheck
             // 
-            this.BtnCheck.Location = new System.Drawing.Point(275, 101);
+            this.BtnCheck.Location = new System.Drawing.Point(275, 257);
             this.BtnCheck.Name = "BtnCheck";
             this.BtnCheck.Size = new System.Drawing.Size(178, 23);
             this.BtnCheck.TabIndex = 0;
@@ -100,25 +98,6 @@
             this.RdbServerAn.Text = "An";
             this.RdbServerAn.UseVisualStyleBackColor = true;
             // 
-            // BtnStopServer
-            // 
-            this.BtnStopServer.Location = new System.Drawing.Point(275, 72);
-            this.BtnStopServer.Name = "BtnStopServer";
-            this.BtnStopServer.Size = new System.Drawing.Size(178, 23);
-            this.BtnStopServer.TabIndex = 2;
-            this.BtnStopServer.Text = "Stop Server";
-            this.BtnStopServer.UseVisualStyleBackColor = true;
-            // 
-            // BtnStartServer
-            // 
-            this.BtnStartServer.Location = new System.Drawing.Point(275, 43);
-            this.BtnStartServer.Name = "BtnStartServer";
-            this.BtnStartServer.Size = new System.Drawing.Size(178, 23);
-            this.BtnStartServer.TabIndex = 3;
-            this.BtnStartServer.Text = "Start Server";
-            this.BtnStartServer.UseVisualStyleBackColor = true;
-            this.BtnStartServer.Click += new System.EventHandler(this.BtnStartServer_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
@@ -143,9 +122,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Programm:";
+            this.label5.Text = "Process:";
             // 
             // TxtProcess
             // 
@@ -153,7 +132,6 @@
             this.TxtProcess.Name = "TxtProcess";
             this.TxtProcess.Size = new System.Drawing.Size(100, 20);
             this.TxtProcess.TabIndex = 8;
-            this.TxtProcess.Text = "server";
             // 
             // label4
             // 
@@ -197,7 +175,6 @@
             this.TxtDatenbank.Name = "TxtDatenbank";
             this.TxtDatenbank.Size = new System.Drawing.Size(100, 20);
             this.TxtDatenbank.TabIndex = 3;
-            this.TxtDatenbank.Text = "gta_v";
             // 
             // TxtPasswort
             // 
@@ -206,7 +183,6 @@
             this.TxtPasswort.PasswordChar = '*';
             this.TxtPasswort.Size = new System.Drawing.Size(100, 20);
             this.TxtPasswort.TabIndex = 2;
-            this.TxtPasswort.Text = "1GAIogWUZN7Z5x1l";
             this.TxtPasswort.UseWaitCursor = true;
             // 
             // TxtUser
@@ -215,7 +191,6 @@
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(100, 20);
             this.TxtUser.TabIndex = 1;
-            this.TxtUser.Text = "gta-server";
             // 
             // TxtHost
             // 
@@ -223,7 +198,6 @@
             this.TxtHost.Name = "TxtHost";
             this.TxtHost.Size = new System.Drawing.Size(100, 20);
             this.TxtHost.TabIndex = 0;
-            this.TxtHost.Text = "localhost";
             // 
             // BtnCreateString
             // 
@@ -241,7 +215,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.TxtColumn);
             this.groupBox2.Controls.Add(this.TxtTable);
-            this.groupBox2.Location = new System.Drawing.Point(275, 158);
+            this.groupBox2.Location = new System.Drawing.Point(275, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(178, 88);
             this.groupBox2.TabIndex = 6;
@@ -290,12 +264,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.BtnCreateString);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.BtnStartServer);
-            this.Controls.Add(this.BtnStopServer);
             this.Controls.Add(this.GrpServerStatus);
             this.Controls.Add(this.BtnCheck);
             this.Name = "Form1";
-            this.Text = "Server Monitor";
+            this.Text = "Process Monitor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.GrpServerStatus.ResumeLayout(false);
             this.GrpServerStatus.PerformLayout();
@@ -313,8 +285,6 @@
         private System.Windows.Forms.GroupBox GrpServerStatus;
         private System.Windows.Forms.RadioButton RdbServerAus;
         private System.Windows.Forms.RadioButton RdbServerAn;
-        private System.Windows.Forms.Button BtnStopServer;
-        private System.Windows.Forms.Button BtnStartServer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

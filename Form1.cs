@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Server_Monitor
+namespace Process_Monitor
 {
     public partial class Form1 : Form
     {
@@ -22,7 +22,7 @@ namespace Server_Monitor
 
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-            if (ServerMonitor.IsProcessRunning())
+            if (ProcessMonitor.IsProcessRunning())
             {
                 RdbServerAn.Checked = true;
                 RdbServerAus.Checked = false;
@@ -33,17 +33,17 @@ namespace Server_Monitor
                 RdbServerAn.Checked = false;
                 RdbServerAus.Checked = true;
             }
-            ServerMonitor.UpdateDatabaseServerStatus();
+            ProcessMonitor.UpdateDatabaseServerStatus();
         }
 
         private void RdbServerAn_CheckedChanged(object sender, EventArgs e)
         {
-            ServerMonitor.StartServer();
+            ProcessMonitor.StartServer();
         }
 
         private void BtnStartServer_Click(object sender, EventArgs e)
         {
-            ServerMonitor.StartServer();
+            ProcessMonitor.StartServer();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace Server_Monitor
             }
             else
             {
-                ServerMonitor.CreateConnectionString(host, user, password, database);
+                ProcessMonitor.CreateConnectionString(host, user, password, database);
             }
         }
 
@@ -70,10 +70,10 @@ namespace Server_Monitor
             string database = TxtDatenbank.Text;
             string table = TxtTable.Text;
             string col = TxtColumn.Text;
-            ServerMonitor.processName = TxtProcess.Text;
-            ServerMonitor.col = col;
-            ServerMonitor.table = table;
-            ServerMonitor.CreateConnectionString(host, user, password, database);
+            ProcessMonitor.processName = TxtProcess.Text;
+            ProcessMonitor.col = col;
+            ProcessMonitor.table = table;
+            ProcessMonitor.CreateConnectionString(host, user, password, database);
         }
     }
 }
