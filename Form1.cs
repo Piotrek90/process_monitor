@@ -16,8 +16,6 @@ namespace Process_Monitor
         {
             InitializeComponent();
             //Start Stop Buttons ausgrauen
-            BtnStartServer.Enabled = false;
-            BtnStopServer.Enabled = false;
         }
 
         private void BtnCheck_Click(object sender, EventArgs e)
